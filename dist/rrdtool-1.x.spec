@@ -329,6 +329,9 @@ rm -rf $RPM_BUILD_ROOT%{_docdir}/%{name}-* \
 # crap with strip complaining about permissions
 find %{buildroot} -type f -name '*.so' -exec chmod u+w {} \;
 
+# leftover?
+rm %{buildroot}/usr/lib64/librrd.la
+
 %find_lang %{name}
 
 %check
